@@ -33,7 +33,7 @@ Go to your computer’s terminal and execute the following. (The appropriate ter
 `sudo docker run -v "/Users/esalawu/tp-db:/var/tp-db" emmanuelsalawu/tp-db /bin/bash -c "./loadDbAndListenJuly22.exe &> /dev/null & sleep 10 && /usr/local/miniconda2/bin/python query.py --query 'A/E 0,4 D 2,3 E 2,3 H' --output /var/tp-db/result; echo 'Done. Now exiting'; exit "`
 
 #### Explanations of What this Step [3] Does
-The command above has the following components. You will need to change the parts in bold accordingly. 
+The command above has the following components. You will need to change the parts in bold accordingly. <br/>
 sudo docker run \
 -v "**/Users/esalawu/tp-db**:/var/tp-db" \
 emmanuelsalawu/tp-db \
