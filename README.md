@@ -1,7 +1,7 @@
 # Therapeutic Peptide Design Database (TP-DB)
 
  
-We make all the executables, python source codes, and prebuilt databases for the Therapeutic Peptide Design Database (TP-DB, https://dyn.life.nthu.edu.tw/design) available through GitHub (https://github.com/emmanuelsalawu/tp-db) and Docker Hub (https://hub.docker.com/repository/docker/emmanuelsalawu/tp-db) under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+We make all the executables, python source codes, and prebuilt databases for the Therapeutic Peptide Design Database (TP-DB, https://dyn.life.nthu.edu.tw/design) available through GitHub (https://github.com/emmanuelsalawu/tp-db) and Docker Hub (https://hub.docker.com/r/emmanuelsalawu/tp-db) under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Using TP-DB Online 
 The easiest way for a general user to use the Therapeutic Peptide Design Database (TP-DB) is through the version we host online at https://dyn.life.nthu.edu.tw/design. Nonetheless, all the results of the version we are hosting can be reproduced and even extended through the executables, python source codes, and prebuilt-databases.
@@ -27,15 +27,17 @@ Go to your computer’s terminal and execute the following. (The appropriate ter
 
 #### Explanations of What this Step [3] Does
 The command above has the following components. You will need to change the parts in **bold** accordingly. <br/>
-`sudo docker run \` <br/>
-`-v "/Users/esalawu/tp-db:/var/tp-db" \` <br/>
-`emmanuelsalawu/tp-db \`<br/>
-`/bin/bash -c "./loadDbAndListenJuly22.exe &> /dev/null & sleep 10 && \`<br/>
-`/usr/local/miniconda2/bin/python query.py \`<br/>
-`--query 'A/E 0,4 D 2,3 E 2,3 H' \`<br/>
-`--output /var/tp-db/result_prefix; \`<br/>
-`echo 'Done. Now exiting'; exit "`<br/>
 
+
+sudo docker run \ <br/>
+-v "**/Users/esalawu/tp-db**:/var/tp-db" \ <br/>
+emmanuelsalawu/tp-db \ <br/>
+/bin/bash -c "./loadDbAndListenJuly22.exe &> /dev/null & sleep 10 && \<br/>
+/usr/local/miniconda2/bin/python query.py \ <br/>
+--query '**A/E 0,4 D 2,3 E 2,3 H**' \ <br/>
+--output /var/tp-db/**result**; \ <br/>
+echo 'Done. Now exiting'; exit " <br/>
+ 
 
 `sudo docker run `<br/>
 This tells Docker engine that we want to run an instance.<br/>
