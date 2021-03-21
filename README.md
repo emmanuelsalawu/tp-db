@@ -19,9 +19,9 @@ This version of TP-DB has been tested on Mac OS (version 10.14.6), Windows (vers
 [c] Install Docker Engine on Linux: https://docs.docker.com/engine/install/ 
 
 ### [3] Run TP-DB / Demo
-NOTE: The first time you run TP-DB using the command below, a docker image would be downloaded. This may require between 5GB and 10GB data transfer through the internet. Depending on your internet connection, this may take between 10 minutes and 30 minutes. However, subsequent running of the program makes use of the already downloaded TP-DB docker image and would run faster finishing between 2 to 5 minutes dependent on your systems configuration. 
+NOTE: The first time you run TP-DB using the command below, a docker image would be downloaded. This may require between 5GB and 10GB data transfer through the internet. Depending on your internet connection, this may take between 10 minutes and 30 minutes. However, subsequent running of the program makes use of the already downloaded TP-DB docker image and would run faster finishing between 2 to 5 minutes depending on your system's configuration. 
 
-Go you your computer’s terminal and execute the follow. (The appropriate terminal on a Windows machine could be the command prompt window that is running with an administrator privilege, and would not require “sudo” at the beginning of the command.)
+Go to your computer’s terminal and execute the following. (The appropriate terminal on a Windows machine could be the command prompt window that is running with an administrator privilege, and would not require “sudo” at the beginning of the command.)
 
 `sudo docker run -v "/Users/esalawu/tp-db:/var/tp-db" emmanuelsalawu/tp-db /bin/bash -c "./loadDbAndListenJuly22.exe &> /dev/null & sleep 10 && /usr/local/miniconda2/bin/python query.py --query 'A/E 0,4 D 2,3 E 2,3 H' --output /var/tp-db/result_prefix; echo 'Done. Now exiting'; exit "`
 
@@ -38,10 +38,10 @@ The command above has the following components. You will need to change the part
 
 
 `sudo docker run `<br/>
-The tells Docker engine that we want to run an instance.<br/>
+This tells Docker engine that we want to run an instance.<br/>
 
 `-v "/Users/esalawu/tp-db:/var/tp-db" `<br/>
-The tells Docker engine that we want to mount a path/directory on our computer **/Users/esalawu/tp-db** to in the Docker instance and it should be visible as /var/tp-db within the Docker instance. Through this, we can easily write outputs from the docker instance into a location that is accessible outside of the docker instance and can be opened on the host computer. <br/>
+This tells Docker engine that we want to mount a path/directory on our computer **/Users/esalawu/tp-db** to in the Docker instance and it should be visible as /var/tp-db within the Docker instance. Through this, we can easily write outputs from the docker instance into a location that is accessible outside of the docker instance and can be opened on the host computer. <br/>
 
 `emmanuelsalawu/tp-db `<br/>
 This is the name of the TP-DB docker image that is available in docker hub https://hub.docker.com/repository/docker/emmanuelsalawu/tp-db. It is downloaded the first time we run the command and remains available locally henceforth.<br/>
@@ -60,7 +60,7 @@ This is where the results would be written. <br/>
 Only the **bold** part needs to be changed. You would remember that with -v "**/Users/esalawu/tp-db**:/var/tp-db" above, we successfully mapped "**/Users/esalawu/tp-db**" in the host computer to "/var/tp-db" in the docker instance. Therefore, /var/tp-db/**result_prefix** actually points to /var/tp-db/**result_prefix**.<br/>
 
 `echo 'Done. Now exiting'; `<br/>
-The informs the user that the computations have finished. <br/>
+This informs the user that the computations have finished. <br/>
 
 `exit" `<br/>
 This closes the docker instance and frees the resources. <br/>
