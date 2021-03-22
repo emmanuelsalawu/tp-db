@@ -1,5 +1,7 @@
 # Therapeutic Peptide Design Database (TP-DB)
-We make all the executables, python source codes, and prebuilt databases for the Therapeutic Peptide Design Database (TP-DB, https://dyn.life.nthu.edu.tw/design) available through GitHub (https://github.com/emmanuelsalawu/tp-db) under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0). 
+We make all the executables, python source codes, and prebuilt databases for the Therapeutic Peptide Design Database (TP-DB, https://dyn.life.nthu.edu.tw/design) available through [GitHub](https://github.com/emmanuelsalawu/tp-db) under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). 
+
+TP-DB is running at a Linux system in [NTHU](https://dyn.life.nthu.edu.tw/design). The local version is best suited for Linux and Mac users; For Window users, PowerShell has to be used after assuring that a 10GB memory and 20GB hard disk space are made available in your local PC.
 
 Kindly note that, for a general use case, **there is no need to directly download any of the files located in the links above**. They are provided for transparency. All downloads are directly handled in step 3 below, which contains a command that handles the downloading (of a 10 GB Docker image the first time the command is run) and its execution. For subsequent execution of the command (regardless of the query), the already downloaded docker image is loaded and performs the search with the results returned in a couple of minutes (which is slower than our webserver, see step 3 below for the reasons).
 
