@@ -88,5 +88,5 @@ NOTE: Any subsequent use of TP-DB after this step will make docker to redownload
 
 
 ## Diving Deeper
-Python source codes for TP-DB are available through GitHub: https://github.com/emmanuelsalawu/tp-db where users can go through the codes and, if desired, copy and modify it to suit their needs. The data comprising the database can be found at  http://dx.doi.org/10.5281/zenodo.4628579 (e.g. see “sequences_helix_corrected_dec292017.fasta”).
+Python source codes for TP-DB are available through GitHub: https://github.com/emmanuelsalawu/tp-db where users can go through the codes and, if desired, copy and modify it to suit their needs. The data comprising the database can be found at  http://dx.doi.org/10.5281/zenodo.4628579 (e.g. see “sequences_helix_corrected_dec292017.fasta.zip”).
 
