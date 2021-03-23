@@ -6,7 +6,7 @@ TP-DB is generally running at a Linux system in [NTHU](https://dyn.life.nthu.edu
 Please note that, for a general use case, **there is no need to directly download any of the files located in the links above.** Those are listed for transparency. All downloads are directly handled in step 3 below, which contains a command that handles the downloading (of a 10 GB docker image the first time the command is run) as well as its execution. When step 3 is run for the first time, the docker image has to be downloaded before the code execution. From the second query onward (regardless of the query), the already downloaded docker image is loaded from users’ local computers and performs the search with results returned in a few minutes (which is slower than our webserver, see step 3 below for the reasons).
 
 ## About Docker 
-Docker makes it possible to share prebuilt computation environment for a software so that all users can have all the required dependencies and libraries running in their local computers. For this reason, we provide a docker image for TP-DB (emmanuelsalawu/tp-db). Although the TP-DB is made available through Docker Hub (https://hub.docker.com/r/emmanuelsalawu/tp-db), **we strongly recommend that users follow step 3 below for the downloading and the execution of the docker image**. On the other hand, if desired, a user can extract/export all the codes and the databases from the docker image. We make the relevant contents of the docker image available at https://drive.google.com/drive/u/1/folders/1lEZR0JQ5NnTWA5lDhAP2MEtptMgXVs8k on a Google Drive for reference. 
+Docker makes it possible to share prebuilt computation environment for a software so that all users can have all the required dependencies and libraries running in their local computers. For this reason, we provide a docker image for TP-DB (emmanuelsalawu/tp-db). Although the TP-DB is made available through Docker Hub (https://hub.docker.com/r/emmanuelsalawu/tp-db), **we strongly recommend that users follow step 3 below for the downloading and the execution of the docker image**. On the other hand, if desired, a user can extract/export all the codes and the databases from the docker image. We make the relevant contents of the docker image available at http://dx.doi.org/10.5281/zenodo.4628579 on Zenodo for reference. 
 
 
 ## Using TP-DB Online 
@@ -50,7 +50,7 @@ echo 'Done. Now exiting'; exit "
 This tells Docker engine that we want to run an instance.
 
 `-v "/tp-db:/tp-db"` <br/>
-The first **/tp-db** is the location (i.e. a directory) in your computer where the output will be written. It has to be a full path (and not a relative path). The second /tp-db is a location inside the docker instance. The command tells docker engine to mount a path/directory on your computer, **/tp-db**, to the docker instance and it should be visible as **/tp-db** within the docker instance. Through this, we can easily write outputs from the docker instance into a location that is accessible outside of the docker instance and can be opened on the host computer.
+The first **/tp-db** is the location (i.e. a directory) in your computer where the output will be written. It has to be a full path (and not a relative path). The second **/tp-db** is a location inside the docker instance. The command tells docker engine to mount a path/directory on your computer, **/tp-db**, to the docker instance and it should be visible as **/tp-db** within the docker instance. Through this, we can easily write outputs from the docker instance into a location that is accessible outside of the docker instance and can be opened on the host computer.
 
 `emmanuelsalawu/tp-db`<br/>
 This is the name of the TP-DB docker image that is available in docker hub https://hub.docker.com/repository/docker/emmanuelsalawu/tp-db. It is downloaded the first time we run the command and remains available locally henceforth.
@@ -88,5 +88,5 @@ NOTE: Any subsequent use of TP-DB after this step will make docker to redownload
 
 
 ## Diving Deeper
-Python source codes for TP-DB are available through GitHub: https://github.com/emmanuelsalawu/tp-db where users can go through the codes and, if desired, copy and modify it to suit their needs. The data comprising the database can be found at  https://drive.google.com/drive/u/1/folders/1lEZR0JQ5NnTWA5lDhAP2MEtptMgXVs8k (e.g. see “sequences_helix_corrected_dec292017.fasta”).
+Python source codes for TP-DB are available through GitHub: https://github.com/emmanuelsalawu/tp-db where users can go through the codes and, if desired, copy and modify it to suit their needs. The data comprising the database can be found at  http://dx.doi.org/10.5281/zenodo.4628579 (e.g. see “sequences_helix_corrected_dec292017.fasta”).
 
