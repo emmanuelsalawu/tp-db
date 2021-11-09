@@ -77,7 +77,7 @@ This closes the docker instance and frees the resources.
 
 
 ### [4] Visualize the Results 
-Navigate to the folder you specified in step 3. Open the html file in the folder. It will contain the results identical to the one that can be obtained by using the online TP-DB. Here https://dyn.life.nthu.edu.tw/design/result?JobID=61893532d is an example of the results page.
+Navigate to the folder you specified in step 3. Open the html file in the folder. It will contain the results identical to the one that can be obtained by using the online TP-DB. Here https://dyn.life.nthu.edu.tw/design/result?JobID=618a8525a is an example of the results page.
 
 ### [5] Removing the Docker Image and Freeing up the Disk 
 When a user does not need TP-DB anymore, it is possible to delete TP-DB’s docker image and free up the used disk space by executing the following command.
