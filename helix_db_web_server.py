@@ -147,7 +147,7 @@ def parseKey (key):
 
 
 def parseRawOutputIntoNativeTypes (raw_output_seg):
-    
+    """"""
     raw_output_seg_native = []
     for item in raw_output_seg:
         raw_output_seg_native.append ([])
@@ -347,8 +347,6 @@ def genHtmlTable (sorted_results):
         output += '<tr class="%s">%s</tr>' % (unique, ''.join (['<td>%s</td>' % i for i in table_row]), )
         
     return '<span class="monospace"><table id="results1">%s</table></span>' % output
-
-
 
 
 
@@ -914,11 +912,6 @@ class MainHandler(tornado.web.RequestHandler):
         
         
         
-        
-        
-        
-        
-        
 def sig_handler(sig, frame):
     logging.warning('Caught signal: %s', sig)
     tornado.ioloop.IOLoop.instance().add_callback(shutdown)
@@ -997,17 +990,4 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
